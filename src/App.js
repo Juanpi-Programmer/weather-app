@@ -1,24 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
+import WeatherBar from './WeatherBar';
 import './App.css';
+import './weathers.css';
 
 function App() {
+  let weathers = [
+    {
+      day: 'Lun',
+      icon: 'day-sunny-overcast',
+      max: 30,
+      min: 18
+    },
+    {
+      day: 'Mar',
+      icon: 'day-cloudy',
+      max: 30,
+      min: 18
+    },
+    {
+      day: 'Mie',
+      icon: 'day-sunny',
+      max: 30,
+      min: 18
+    },
+    {
+      day: 'Jue',
+      icon: 'day-sunny-overcast',
+      max: 34,
+      min: 22
+    },
+    {
+      day: 'Vie',
+      icon: 'day-cloudy',
+      max: 32,
+      min: 20
+    },
+    {
+      day: 'Sab',
+      icon: 'day-sleet',
+      max: 33,
+      min: 19
+    },
+    {
+      day: 'Dom',
+      icon: 'rain',
+      max: 28,
+      min: 17
+    },
+    
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+      <h2 className="title">Clima <span>Mendoza</span></h2>
+      <WeatherBar weathers = {weathers} />
     </div>
   );
 }
