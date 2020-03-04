@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import './weathers.css';
 
 function WeatherCard(props){
@@ -7,14 +8,14 @@ function WeatherCard(props){
     return (
         <div className="card">
             <div className="day">
-                {props.weather.day}
+                {props.data.day}
             </div>
             <div className="icon">
-                <i className={`wi wi-${props.weather.icon}`}></i>
+                <img src={props.data.icon} alt="icono clima" className="clima-icono" />
             </div>
             <div className="temp">
-                <span className="max">{props.weather.max}°</span>
-                <span className="min">{props.weather.min}°</span>
+                <span className="max">{props.data.max}°</span>
+                <span className="min">{props.data.min}°</span>
             </div>
         </div>
 
